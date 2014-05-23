@@ -24,6 +24,10 @@ gem "omniauth-google-oauth2"
 
 gem "omnicontacts"
 
+gem 'will_paginate', '~> 3.0'
+
+gem 'sqlite3'
+
  group :production do
    gem 'pg'
  end

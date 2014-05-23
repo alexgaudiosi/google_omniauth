@@ -1,7 +1,8 @@
 <% if !@contacts.nil?%>
-<% @contacts.each do |c|%>
-<ul>
-<li><%= c[:name]%> : <%= c[:email]%></li>
-</ul>
+		<% @contacts.each do |c|%>
+			<ul>
+				<li><%= c[:name]%> : <%= c[:email]%></li>
+			</ul>
+		<%end%>
 <%end%>
-<%end%>
+<%= will_paginate @contacts %>
