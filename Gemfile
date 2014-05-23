@@ -24,6 +24,10 @@ gem "omniauth-google-oauth2"
 
 gem "omnicontacts"
 
+ group :production do
+   gem 'pg'
+ end
+
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
