@@ -1,28 +1,29 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Technical test for creating a small application to login with Omniauth via Google API, pulling their contacts list in
+alphabetical order then listing 30 contacts per page.
 
-Things you may want to cover:
+Technology used:
 
-* Ruby version
+* Ruby 
 
-* System dependencies
+* Ruby on Rails
 
-* Configuration
+* Omniauth
 
-* Database creation
+* Omniconact
 
-* Database initialization
+* Will_Paginate
 
-* How to run the test suite
+To run, clone the repository, run <tt>bundle install</tt> in the terminal, then <tt>rails s</tt> to launch a server. Open
+the given localhost address in your browser, then sign in via Google and your contacts will be displayed.
 
-* Services (job queues, cache servers, search engines, etc.)
+I encountered some problems with implementing the will_paginate gem where by it will only display the first page of contacts.
+From my reserach it appears to be an issue as the access token for the Google contacts API is one time use access, and so the
+authentication will fail on clicking onto another page of contacts.
 
-* Deployment instructions
+I posted my problem on StackOverflow but unfortunately could not get a working solution. 
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+In a real world situation I would beforehand ask recommended gems to use for the application to ensure there'd be no conflicts
+like the one I came across. I attempted to upload to heroku (http://googlecontactstest.herokuapp.com/) but had an issue with
+the Google API.
